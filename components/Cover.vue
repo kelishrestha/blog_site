@@ -3,7 +3,9 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
-          <h3 class="masthead-brand">Shizenluver</h3>
+          <h3 class="masthead-brand w-50">
+            <img src="~assets/logo.png" alt="Logo" class="w-50">
+          </h3>
           <nav class="nav nav-masthead justify-content-center">
             <a class="nav-link active" href="/">Home</a>
             <a class="nav-link" href="#">Archives</a>
