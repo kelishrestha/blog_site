@@ -23,6 +23,10 @@ module.exports = {
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Comfortaa&display=swap'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Permanent+Marker|Rock+Salt|Caveat&display=swap'
       }
     ]
   },

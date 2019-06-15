@@ -15,10 +15,13 @@
         </div>
       </header>
       <main role="main" class="inner cover">
-        <h1 class="cover-heading">Cover your page.</h1>
-        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-        <p class="lead">
-          <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+        <h1 class="cover-heading">begin. again.</h1>
+        <p class="lead cover-text">
+          There's only one true path in life...
+          <br>
+          The road that leads to all...
+          <br>
+          Leads to one...
         </p>
       </main>
 
@@ -31,7 +34,6 @@
 
   </div>
 </template>
-
 
 <style scoped>
 /*
@@ -67,7 +69,6 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   color: #fff;
-  text-shadow: 0 .05rem .1rem rgba(233, 233, 233, 0.5);
   box-shadow: inset 0 0 5rem rgba(55, 55, 55, 0.5);
 }
 
@@ -75,6 +76,13 @@ a:hover {
   max-width: 42em;
 }
 
+.cover-heading {
+  font-family: 'Permanent Marker', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cover-text {
+  font-family: 'Rock Salt', cursive;
+}
 
 /*
  * Header
@@ -92,7 +100,7 @@ a:hover {
   font-weight: 700;
   color: rgba(255, 255, 255, .5);
   background-color: transparent;
-  border-bottom: .25rem solid transparent;
+  /* border-bottom: .25rem solid transparent; */
   font-family: 'Comfortaa', sans-serif;
 }
 
