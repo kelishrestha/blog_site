@@ -1,20 +1,20 @@
 <template>
   <div>
-    <Cover />
-    <Topics />
+    <Navbar />
+    <Story />
     <Footer />
   </div>
 </template>
 
 <script>
-import Cover from '~/components/Cover.vue'
-import Topics from '~/components/Topics.vue'
+import Navbar from '~/components/Navbar.vue'
+import Story from '~/components/Story.vue'
 import Footer from '~/components/Footer.vue'
 
 export default {
   components: {
-    Cover,
-    Topics,
+    Navbar,
+    Story,
     Footer
   }
 }
