@@ -1,56 +1,26 @@
 <template>
   <div>
     <main role="main" class="container pt-5">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item text-capitalize"><a href="#" class="text-danger">{{ $nuxt.$route.params.topic.replace(/-/gi, " ") }}</a></li>
-          <li class="breadcrumb-item text-capitalize active" aria-current="page">{{ $nuxt.$route.params.story.replace(/-/gi, " ") }}</li>
-        </ol>
-      </nav>
+      <section class="wrapper row">
+        <ul class="breadCrumbs">
+          <li>
+            <a href="/" title="Home" class="animation">
+              <div class="icon-home icon-padding"></div>
+            </a>
+          </li>
+          <li><a v-bind:href="parentPath" title="Home" class="animation text-capitalize">{{ $nuxt.$route.params.topic.replace(/-/gi, " ") }}</a></li>
+          <li class= "activePage"><p v-bind:title="$nuxt.$route.params.story.replace(/-/gi, ' ')" class="animation text-capitalize">{{ $nuxt.$route.params.story.replace(/-/gi, " ") }}</p></li>
+          <div class="clear"></div>
+        </ul>
+      </section>
       <div class="starter-template row">
         <div class="col">
-          <div class="card">
+          <div class="card shadow-lg">
             <div class="card-body">
-              <h5 class="card-title mb-0">The Healer</h5>
-              <small class="card-subtitle mb-2 text-muted">Thursday, January 17, 2019</small>
+              <h5 class="card-title mb-0">{{ title }}</h5>
+              <small class="card-subtitle mb-2 text-muted">{{ publishedDate }}</small>
               <p class="card-text pt-4">
-                <pre>
-Dark pale nights, those unknown chilling voices
-Thrusting into my head, locked down, I fall down
-Casted upon a spell
-I tried to break them apart but nothing would gain
-
-Every day it was the same
-Fears and doubts pilling up against
-The cold chill inside my heart
-The concussion over my head
-Never ending in a blissful state
-
-I was broken when I heard a soulful song
-Healing me red through my blue veins
-Scattering those ultrasonic sounds into seven waves
-Forged with its painful stories that even destroyed vain
-
-The melody pierced through my skin
-Charging me up with its troth
-For it was only meant for me
-To heal myself and comfort me with its warm soul
-
-Every time I suffocated, I found you as my escape
-Antidoting me with your words inside my veins
-I held my head high with your comforts again
-I shall might rise up in this world of pain
-
-You are my healer
-You are my fiend
-Will you heal me whenever I ask you not to save me?
-Will you set me free whenever I push you off to leave me alone?
-
-I close my eyes and feel you grin
-Only to know that you are not real
-I save myself in your world where you seal
-The broken me inside your black shining wings
-                </pre>
+                <pre>{{ content }}</pre>
                 <footer class="blockquote-footer float-right">
                   <em>
                     Shizenluver
@@ -61,7 +31,7 @@ The broken me inside your black shining wings
           </div>
         </div>
         <div class="col col-4 mx-3">
-          <div class="card bg-dark text-white">
+          <div class="card shadow bg-dark text-white">
             <div class="card-body">
               <h5 class="card-title">Archives</h5>
               <h6 class="card-subtitle my-2">
@@ -79,6 +49,37 @@ The broken me inside your black shining wings
   </div>
 </template>
 
+<script>
+import topicDetails from '../assets/data/topic-details.json'
+
+export default {
+  data ({ params }) {
+    var currentTopic = this.$route.params.topic;
+    var currentPath = this.$route.path;
+    let content, title, publishedDate;
+    var allTopics = topicDetails.topics;
+    allTopics.forEach(topic => {
+      if (topic.routeName == currentTopic){
+        var stories = topic.stories;
+        stories.forEach(story => {
+          if (story.routeName == currentPath){
+            content = story.content;
+            title = story.name;
+            publishedDate = story.publishedDate;
+          }
+        });
+      };
+    });
+    return {
+      content: content.join('').replace(/<br\s*[\/]?>/gi, "\n"),
+      parentPath: '/' + this.$route.params.topic,
+      title: title,
+      publishedDate: publishedDate
+    }
+  }
+}
+</script>
+
 <style scoped>
   .starter-template {
     padding: 1rem 1.5rem;
@@ -87,5 +88,87 @@ The broken me inside your black shining wings
     /* font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; */
     font-family: 'Mali', sans-serif;
     font-size: 16px;
+  }
+
+  /* Breadcrumbs */
+
+  .wrapper {
+    width: 600px;
+    /* padding: 20px;
+    margin: 20px auto; */
+    background: #fff;
+  }
+
+  .breadCrumbs {
+    position: relative;
+  }
+
+  .breadCrumbs li {
+    position: relative;
+    float: left;
+    list-style: none;
+  }
+
+  .breadCrumbs li a,
+  .breadCrumbs li p {
+    display: block;
+    padding: 0 10px 0 30px;
+    line-height: 40px;
+    color: #fff;
+    background: #3fabba;
+  }
+
+  .breadCrumbs li:first-child a {
+    padding: 0 10px 0 20px;
+  }
+
+  .breadCrumbs li a:hover {
+
+  }
+
+  .breadCrumbs li.activePage p,
+  .breadCrumbs li.activePage a {
+    background: #333;
+  }
+
+  .breadCrumbs li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -20px;
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #3fabba;
+    z-index: 10;
+  }
+
+  .breadCrumbs li.activePage:after {
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #333;
+  }
+
+    /* GIVE EVERY CHILD A DIFFERENT COLOR */
+  .breadCrumbs li:nth-child(1) a {
+    background: #b3202e;
+  }
+
+  .breadCrumbs li:nth-child(1):after {
+    border-left: 20px solid #b3202e;
+  }
+
+  .breadCrumbs li:nth-child(2) a {
+    background: #ff5757;;
+  }
+
+  .breadCrumbs li:nth-child(2):after {
+    border-left: 20px solid #ff5757;;
+  }
+
+  .icon-padding {
+    padding: 0.75em;
   }
 </style>

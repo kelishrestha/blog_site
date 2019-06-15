@@ -54,8 +54,12 @@ module.exports = {
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
+    'nuxt-simple-line-icons',
+    '@nuxtjs/axios'
   ],
-
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+  },
   /*
   ** Build configuration
   */

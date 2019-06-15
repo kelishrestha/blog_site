@@ -4,9 +4,8 @@
 
       <section class="jumbotron text-center bg-light rounded-0">
         <div class="container">
-          <h1 class="jumbotron-heading text-capitalize">{{ $nuxt.$route.params.topic.replace(/-/gi, " ") }}</h1>
-          <p class="lead">Something short and leading about the collection below—its contents, the creator,
-            etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+          <h1 class="jumbotron-heading text-capitalize cover-text text-danger">{{ topic.name }}</h1>
+          <p class="lead cover-heading">{{ topic.tagline }}</p>
           <p class="d-none">
             <a href="#" class="btn btn-primary my-2">Main call to action</a>
             <a href="#" class="btn btn-secondary my-2">Secondary action</a>
@@ -17,17 +16,21 @@
       <div class="album py-5 topic-list-bg">
         <div class="container">
           <div class="row">
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm text-white bg-danger">
-                <img src="https://images.unsplash.com/photo-1445855743215-296f71d4b49c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt="" class="bd-placeholder-img card-img-top">
+            <div class="col-md-4" v-for="story in topic.stories">
+              <div class="card border-0 mb-4 shadow-lg text-white bg-danger">
+                <img v-bind:src="story.backgroundImage" alt="" class="bd-placeholder-img card-img-top">
                 <div class="card-body">
                   <div class="d-flex justify-content-between align-items-center">
-                    <h4 class="card-title">The Healer</h4>
+                    <div class="card-title">
+                      <h4 class="mb-0">
+                        {{ story.name }}
+                      </h4>
+                      <small>{{ story.publishedDate }}</small>
+                    </div>
                     <div class="btn-group">
-                      <a href="/the-sore-transition/the-healer" class="btn btn-sm btn-dark">View</a>
+                      <a v-bind:href="story.routeName" class="btn btn-sm btn-dark">View</a>
                     </div>
                   </div>
-                  <small class="float-right">9 mins</small>
                 </div>
               </div>
             </div>
@@ -39,6 +42,27 @@
   </div>
 </template>
 
+<script>
+import topicDetails from '../assets/data/topic-details.json'
+
+export default {
+  data ({ params }) {
+    var currentTopic = this.$route.params.topic;
+    var topic;
+    var allTopics = topicDetails.topics;
+    allTopics.forEach(element => {
+      if (element.routeName == currentTopic){
+        topic = element;
+      };
+    });
+    console.log(topic)
+    return {
+      topics: topicDetails,
+      topic: topic
+    }
+  }
+}
+</script>
 
 <style scoped>
   .bd-placeholder-img {
@@ -105,4 +129,11 @@
     /* background-position: bottom */
   }
 
+  .cover-heading {
+    font-family: 'Permanent Marker', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .cover-text {
+    font-family: 'Rock Salt', cursive;
+  }
 </style>

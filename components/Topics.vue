@@ -2,8 +2,12 @@
   <div>
     <div class="container-fluid bg-light">
       <div class="series-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <h1 class="display-4">Series</h1>
-        <p class="lead">Some tagline.</p>
+        <h1 class="display-5 text-uppercase">Creations</h1>
+        <p class="lead">
+          <small>
+            The current YOU is the best version of yourself.
+          </small>
+          </p>
       </div>
     </div>
     <div class="d-md-flex flex-md-equal w-100">
@@ -14,10 +18,18 @@
             The Peach Fall
             </a>
           </h2>
-          <p class="lead mb-0">Mini-series.</p>
+          <p class="lead mb-0 topic-context">Mini-series.</p>
         </div>
         <div class="bg-light shadow-sm mx-auto my-4 topic-bg text-dark p-4">
-          <p class="lead">Some tagline.</p>
+          <p class="lead">
+            <h2 class="topic-tagline">
+              How will you get up again when you descend into the peach fall?
+            </h2>
+            <a href="/the-peach-fall" class="btn btn-danger p-3">
+              <div class="icon-book-open"></div>
+              <span class="series-header"> Read Now</span>
+            </a>
+          </p>
         </div>
       </div>
       <div class="bg-danger pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-light">
@@ -27,10 +39,18 @@
               The Sore Transition
             </a>
           </h2>
-          <p class="lead mb-0">Poetic Collection.</p>
+          <p class="lead mb-0 topic-context">Poetic Collection.</p>
         </div>
         <div class="bg-dark shadow-sm mx-auto my-4 topic-bg p-4">
-          <p class="lead">Some tagline</p>
+          <p class="lead">
+            <h2 class="topic-tagline">
+              I take an oath to slowly become the one I ought to be...
+            </h2>
+            <a href="/the-sore-transition" class="btn btn-danger p-3">
+              <div class="icon-book-open"></div>
+              <span class="series-header"> Read Now</span>
+            </a>
+          </p>
         </div>
       </div>
     </div>
@@ -40,8 +60,18 @@
 <style scoped>
   .series-header {
     max-width: 700px;
+    font-family: 'Comfortaa', sans-serif;
   }
 
+  .topic-tagline {
+    margin: 2% 20%;
+    height: 5em;
+    font-family: 'Caveat', sans-serif;
+  }
+
+  .topic-context {
+    font-family: 'Comfortaa', sans-serif;
+  }
   /*
  * Extra utilities
  */
