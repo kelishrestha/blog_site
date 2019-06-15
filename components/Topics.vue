@@ -10,7 +10,7 @@
       <div class="bg-dark pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
         <div class="my-3 py-3">
           <h2 class="display-5">
-            <a href="/thepeachfall">
+            <a href="/the-peach-fall">
             The Peach Fall
             </a>
           </h2>
@@ -23,7 +23,7 @@
       <div class="bg-danger pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-light">
         <div class="my-3 p-3">
           <h2 class="display-5">
-            <a href="/thesoretransition">
+            <a href="/the-sore-transition">
               The Sore Transition
             </a>
           </h2>

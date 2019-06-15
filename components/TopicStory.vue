@@ -2,10 +2,10 @@
   <div>
     <main role="main">
 
-      <section class="jumbotron text-center topic-bg text-light rounded-0">
+      <section class="jumbotron text-center bg-light rounded-0">
         <div class="container">
-          <h1 class="jumbotron-heading">Topic Title</h1>
-          <p class="lead text-light">Something short and leading about the collection below—its contents, the creator,
+          <h1 class="jumbotron-heading text-capitalize">{{ $nuxt.$route.params.topic.replace(/-/gi, " ") }}</h1>
+          <p class="lead">Something short and leading about the collection below—its contents, the creator,
             etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
           <p class="d-none">
             <a href="#" class="btn btn-primary my-2">Main call to action</a>
@@ -24,7 +24,7 @@
                   <div class="d-flex justify-content-between align-items-center">
                     <h4 class="card-title">The Healer</h4>
                     <div class="btn-group">
-                      <a href="/thesoretransition/thehealer" class="btn btn-sm btn-dark">View</a>
+                      <a href="/the-sore-transition/the-healer" class="btn btn-sm btn-dark">View</a>
                     </div>
                   </div>
                   <small class="float-right">9 mins</small>
