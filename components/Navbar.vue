@@ -36,11 +36,8 @@
 </template>
 
 <style scoped>
-body {
-  padding-bottom: 20px;
-}
-
 .navbar {
   margin-bottom: 20px;
+  font-family: 'Comfortaa', sans-serif;
 }
 </style>

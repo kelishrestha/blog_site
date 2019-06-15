@@ -93,6 +93,7 @@ a:hover {
   color: rgba(255, 255, 255, .5);
   background-color: transparent;
   border-bottom: .25rem solid transparent;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 .nav-masthead .nav-link:hover,
