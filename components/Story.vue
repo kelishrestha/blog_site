@@ -1,26 +1,28 @@
 <template>
   <div>
     <main role="main" class="container pt-5">
-      <section class="wrapper row">
-        <ul class="breadCrumbs">
-          <li>
-            <a href="/" title="Home" class="animation">
-              <div class="icon-home icon-padding"></div>
-            </a>
-          </li>
-          <li><a v-bind:href="parentPath" title="Home" class="animation text-capitalize">{{ $nuxt.$route.params.topic.replace(/-/gi, " ") }}</a></li>
-          <li class= "activePage"><p v-bind:title="$nuxt.$route.params.story.replace(/-/gi, ' ')" class="animation text-capitalize">{{ $nuxt.$route.params.story.replace(/-/gi, " ") }}</p></li>
-          <div class="clear"></div>
-        </ul>
-      </section>
+      <div class="d-none d-md-block">
+        <section class="wrapper row">
+          <ul class="breadCrumbs">
+            <li>
+              <a href="/" title="Home" class="animation">
+                <div class="icon-home icon-padding"></div>
+              </a>
+            </li>
+            <li><a v-bind:href="parentPath" title="Home" class="animation text-capitalize">{{ $nuxt.$route.params.topic.replace(/-/gi, " ") }}</a></li>
+            <li class= "activePage"><p v-bind:title="$nuxt.$route.params.story.replace(/-/gi, ' ')" class="animation text-capitalize">{{ $nuxt.$route.params.story.replace(/-/gi, " ") }}</p></li>
+            <div class="clear"></div>
+          </ul>
+        </section>
+      </div>
       <div class="starter-template row">
-        <div class="col">
+        <div class="col-lg-8 col-md-12 my-2">
           <div class="card shadow-lg">
             <div class="card-body">
               <h5 class="card-title mb-0">{{ title }}</h5>
               <small class="card-subtitle mb-2 text-muted">{{ publishedDate }}</small>
               <h6>
-                <b-badge variant="danger" v-for="labelTag in labels" class="mr-1">{{ labelTag }}</b-badge>
+                <b-badge variant="danger" v-for="labelTag in labels" v-bind:key="labelTag.id" class="mr-1">{{ labelTag }}</b-badge>
               </h6>
               <p class="card-text pt-4">
                 <pre>{{ content }}</pre>
@@ -33,7 +35,7 @@
             </div>
           </div>
         </div>
-        <div class="col col-4 mx-3">
+        <div class="col-lg-4 col-md-12 my-2">
           <div class="card shadow bg-archive text-white">
             <div class="card-body">
               <h5 class="card-title comfortaa">Archives</h5>
