@@ -19,7 +19,7 @@
               <a class="nav-link" href="#">Archives</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Credits</a>
+              <a class="nav-link" href="/credits">Credits</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>
