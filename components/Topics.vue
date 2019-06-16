@@ -7,7 +7,7 @@
           <small>
             The current YOU is the best version of yourself.
           </small>
-          </p>
+        </p>
       </div>
     </div>
     <div class="d-md-flex flex-md-equal w-100">

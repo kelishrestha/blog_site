@@ -20,7 +20,7 @@
               <h5 class="card-title mb-0">{{ title }}</h5>
               <small class="card-subtitle mb-2 text-muted">{{ publishedDate }}</small>
               <h6>
-                <b-badge variant="danger" v-for="label in labels" class="mr-1">{{ label }}</b-badge>
+                <b-badge variant="danger" v-for="labelTag in labels" class="mr-1">{{ labelTag }}</b-badge>
               </h6>
               <p class="card-text pt-4">
                 <pre>{{ content }}</pre>
@@ -80,6 +80,15 @@ export default {
       title: title,
       publishedDate: publishedDate,
       labels: labels
+    }
+  },
+  head () {
+    return {
+      title: this.title,
+      // meta: [
+      //   // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+      //   { hid: 'description', name: 'description', content: 'My custom description' }
+      // ]
     }
   }
 }

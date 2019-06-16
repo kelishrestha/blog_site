@@ -60,6 +60,15 @@ export default {
       topics: topicDetails,
       topic: topic
     }
+  },
+  head () {
+    return {
+      title: this.topic.name,
+      // meta: [
+      //   // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+      //   { hid: 'description', name: 'description', content: 'My custom description' }
+      // ]
+    }
   }
 }
 </script>
