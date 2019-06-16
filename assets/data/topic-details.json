@@ -35,6 +35,7 @@
           "routeName": "/the-sore-transition/the-autumn-fireblocks",
           "filePath": "~assets/data/the-sore-transition/the-healer.txt",
           "publishedDate": "Wednesday, September 26, 2018",
+          "labels": ["#poem", "#theAutumnFireblocks"],
           "backgroundImage": "https://images.unsplash.com/photo-1495467033336-2effd8753d51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
           "content": [
             "The cold breeze swinging by the window<br />",
@@ -98,6 +99,7 @@
           "routeName": "/the-sore-transition/the-healer",
           "filePath": "~assets/data/the-sore-transition/the-healer.txt",
           "publishedDate": "Thursday, January 17, 2019",
+          "labels": ["#poem", "#theHealer"],
           "backgroundImage": "https://images.unsplash.com/photo-1445855743215-296f71d4b49c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80",
           "content": [
             "Dark pale nights, those unknown chilling voices<br />",
