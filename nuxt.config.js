@@ -40,6 +40,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '~/css/style.css'
   ],
 
   /*
@@ -68,6 +69,13 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
+    }
+  },
+  render: {
+    bundleRenderer: {
+      shouldPreload: (file, type) => {
+        return ['script', 'style', 'font'].includes(type)
+      }
     }
   }
 }

@@ -104,84 +104,6 @@ export default {
     font-size: 16px;
   }
 
-  /* Breadcrumbs */
-
-  .wrapper {
-    width: 600px;
-    /* padding: 20px;
-    margin: 20px auto; */
-    background: #fff;
-  }
-
-  .breadCrumbs {
-    position: relative;
-  }
-
-  .breadCrumbs li {
-    position: relative;
-    float: left;
-    list-style: none;
-  }
-
-  .breadCrumbs li a,
-  .breadCrumbs li p {
-    display: block;
-    padding: 0 10px 0 30px;
-    line-height: 40px;
-    color: #fff;
-    background: #3fabba;
-  }
-
-  .breadCrumbs li:first-child a {
-    padding: 0 10px 0 20px;
-  }
-
-  .breadCrumbs li a:hover {
-
-  }
-
-  .breadCrumbs li.activePage p,
-  .breadCrumbs li.activePage a {
-    background: #333;
-  }
-
-  .breadCrumbs li:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: -20px;
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 20px solid #3fabba;
-    z-index: 10;
-  }
-
-  .breadCrumbs li.activePage:after {
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 20px solid #333;
-  }
-
-    /* GIVE EVERY CHILD A DIFFERENT COLOR */
-  .breadCrumbs li:nth-child(1) a {
-    background: #b3202e;
-  }
-
-  .breadCrumbs li:nth-child(1):after {
-    border-left: 20px solid #b3202e;
-  }
-
-  .breadCrumbs li:nth-child(2) a {
-    background: #ff5757;;
-  }
-
-  .breadCrumbs li:nth-child(2):after {
-    border-left: 20px solid #ff5757;;
-  }
-
   .icon-padding {
     padding: 0.75em;
   }
@@ -192,9 +114,5 @@ export default {
 
   .bg-archive {
     background-image: url('https://images.unsplash.com/photo-1518289646039-3e6c87a5aaf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80');
-  }
-
-  .comfortaa {
-    font-family: 'Comfortaa', sans-serif;
   }
 </style>

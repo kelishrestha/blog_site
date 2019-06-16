@@ -14,11 +14,13 @@
       <div class="bg-dark pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
         <div class="my-3 py-3">
           <h2 class="display-5">
-            <a href="/the-peach-fall">
+            <a href="/the-peach-fall" class="comfortaa">
+            <strong>
             The Peach Fall
+            </strong>
             </a>
           </h2>
-          <p class="lead mb-0 topic-context">Mini-series.</p>
+          <p class="lead mb-0 comfortaa">Mini-series.</p>
         </div>
         <div class="bg-light shadow-sm mx-auto my-4 topic-bg text-dark p-4">
           <p class="lead">
@@ -35,11 +37,13 @@
       <div class="bg-danger pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-light">
         <div class="my-3 p-3">
           <h2 class="display-5">
-            <a href="/the-sore-transition">
+            <a href="/the-sore-transition" class="comfortaa">
+            <strong>
               The Sore Transition
+            </strong>
             </a>
           </h2>
-          <p class="lead mb-0 topic-context">Poetic Collection.</p>
+          <p class="lead mb-0 comfortaa">Poetic Collection.</p>
         </div>
         <div class="bg-dark shadow-sm mx-auto my-4 topic-bg p-4">
           <p class="lead">
@@ -67,10 +71,6 @@
     margin: 2% 20%;
     height: 5em;
     font-family: 'Caveat', sans-serif;
-  }
-
-  .topic-context {
-    font-family: 'Comfortaa', sans-serif;
   }
   /*
  * Extra utilities

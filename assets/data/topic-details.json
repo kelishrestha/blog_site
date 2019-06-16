@@ -2,7 +2,7 @@
   "topics": [
     {
       "name": "The Peach Fall",
-      "routeName": "the-peach-fall",
+      "routeName": "/the-peach-fall",
       "label": "series",
       "serialNum": 1,
       "css": {
@@ -15,13 +15,15 @@
           "name": "The Latent Solace",
           "routeName": "/the-peach-fall/the-latent-solace",
           "filePath": "~assets/data/the-peach-fall/the-latent-solace.txt",
-          "publishedDate": "Thursday, January 17, 2019"
+          "publishedDate": "Thursday, January 17, 2019",
+          "backgroundImage": "https://images.unsplash.com/photo-1495467033336-2effd8753d51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+
         }
       ]
     },
     {
       "name": "The Sore Transition",
-      "routeName": "the-sore-transition",
+      "routeName": "/the-sore-transition",
       "label": "poems",
       "serialNum": 1,
       "css": {
