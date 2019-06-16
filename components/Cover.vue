@@ -8,7 +8,7 @@
           </h3>
           <nav class="nav nav-masthead justify-content-center">
             <a class="nav-link active" href="/">Home</a>
-            <a class="nav-link" href="#">Archives</a>
+            <a class="nav-link" href="/archives">Archives</a>
             <a class="nav-link" href="/credits">Credits</a>
             <a class="nav-link" href="#">Contact</a>
           </nav>
