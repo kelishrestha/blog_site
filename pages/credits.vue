@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <div class="container-fluid bg-white">
+    <div class="container-fluid bg-white footer-bottom-margin">
       <div class="series-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <h4 class="display-4 text-center rock-salt text-danger"><u>Credits</u></h4>
         <p class="lead d-none">
@@ -10,15 +10,19 @@
           </small>
         </p>
       </div>
-      <div class="container my-4 w-25">
-        <ul class="list-group">
-          <li class="list-group-item" v-for="photoCredit in photoCredits">
-            <div class="media">
-              <img v-bind:src="photoCredit.imageUrl" class="media-image mr-3" alt="">
-              <div class="media-body comfortaa">Source: {{ photoCredit.source }}<p v-html="photoCredit.title"></p></div>
-            </div>
-          </li>
-        </ul>
+      <div class="container my-4">
+        <div class="card-columns">
+          <div class="card" v-for="photoCredit in photoCredits">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <div class="media">
+                  <img v-bind:src="photoCredit.imageUrl" class="media-image mr-3" alt="">
+                  <div class="media-body comfortaa">Source: {{ photoCredit.source }}<p v-html="photoCredit.title"></p></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <Footer />
@@ -63,5 +67,8 @@ export default {
   .media-image {
     width: 64px;
     height: 64px;
+  }
+  .footer-bottom-margin{
+    margin-bottom: 11.4em;
   }
 </style>
