@@ -31,6 +31,7 @@
     "require-extension-hooks-vue": "^2.0.0"
   },
   "engines": {
-    "yarn": "1.15.2"
+    "yarn": "1.15.2",
+    "node": "12.3.0"
   }
 }
